@@ -36,10 +36,10 @@ var COLOR_ERROR = '#ff0000'
 var spreadsheet = SpreadsheetApp.getActive();
 
 var addresses = spreadsheet.getSheetByName("Adresses");
-var addressesLastRow = addresses.getLastRow();
+var addressesLastRow = addresses.getMaxRows();
 
 var km = spreadsheet.getSheetByName("KM " + CURRENT_YEAR);
-var kmLastRow = km.getLastRow();
+var kmLastRow = km.getMaxRows();
 var debugMessage = km.getRange('K2');
 
 // DEBUG
