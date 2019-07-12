@@ -79,21 +79,29 @@ function setupDataValidation() {
   km.getRange(FIRST_ROW, ORIGIN_ADDRESS_COL, kmLastRow - FIRST_ROW + 1)
     .setFontFamily('Arial')
     .setFontSize(8)
-    .setFontColor(null);
+    .setFontColor(null)
+    .setWrapStrategy(SpreadsheetApp.WrapStrategy.WRAP);
   km.getRange(FIRST_ROW, DESTINATION_ADDRESS_COL, kmLastRow - FIRST_ROW + 1)
     .setFontFamily('Arial')
     .setFontSize(8)
-    .setFontColor(null);
+    .setFontColor(null)
+    .setWrapStrategy(SpreadsheetApp.WrapStrategy.WRAP);
   km.getRange(FIRST_ROW, ROUND_TRIP_COL, kmLastRow - FIRST_ROW + 1)
     .setHorizontalAlignment('center');
+  km.getRange(FIRST_ROW, GOOGLE_ROUTE_KM_COL, kmLastRow - FIRST_ROW + 1)
+    .setHorizontalAlignment('right');
   km.getRange(FIRST_ROW, GOOGLE_ROUTE_ORIGIN_COL, kmLastRow - FIRST_ROW + 1)
     .setFontFamily('Arial')
     .setFontSize(8)
-    .setFontColor(null);
+    .setFontColor(null)
+    .setWrapStrategy(SpreadsheetApp.WrapStrategy.WRAP);
   km.getRange(FIRST_ROW, GOOGLE_ROUTE_DEST_COL, kmLastRow - FIRST_ROW + 1)
     .setFontFamily('Arial')
     .setFontSize(8)
-    .setFontColor(null);
+    .setFontColor(null)
+    .setWrapStrategy(SpreadsheetApp.WrapStrategy.WRAP);
+  km.getRange(FIRST_ROW, TOTAL_KM_COL, kmLastRow - FIRST_ROW + 1)
+    .setHorizontalAlignment('right');
   
   // Round trip checkbox
   km.getRange(FIRST_ROW, ROUND_TRIP_COL, kmLastRow - FIRST_ROW + 1).setDataValidation(
