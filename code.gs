@@ -27,6 +27,7 @@ var GOOGLE_ROUTE_DEST_COL = 10
 var TOTAL_KM_COL = 11
 var MESSAGE_COL = 12
 var BIG_TOTAL_KM_COL = 12
+var TOTAL_KM_COL_LETTER = 'K'
 
 var COLOR_INFO = null
 var COLOR_WARN = '#ff9900'
@@ -103,7 +104,7 @@ function setupDataValidation() {
   
   // YEAR TOTAL
   km.getRange(FIRST_ROW - 2, BIG_TOTAL_KM_COL).setValue('TOTAL KMS ' + CURRENT_YEAR);
-  km.getRange(FIRST_ROW - 1, BIG_TOTAL_KM_COL).setFormula('=SUM(' + TOTAL_KM_COL + FIRST_ROW + ':' + TOTAL_KM_COL + kmLastRow + ')');
+  km.getRange(FIRST_ROW - 1, BIG_TOTAL_KM_COL).setFormula('=SUM(' + TOTAL_KM_COL_LETTER + FIRST_ROW + ':' + TOTAL_KM_COL_LETTER + kmLastRow + ')');
 };
 
 /** Triggered automatically */
